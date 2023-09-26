@@ -216,3 +216,21 @@ plt.ylabel("Valor de las Variables")
 plt.legend()
 plt.grid(True)
 plt.show()
+
+'''
+Nomenclatura:
+
+Tasas de Cambio: Las derivadas en el sistema de ecuaciones diferenciales representan las tasas de cambio de cada variable con respecto al tiempo. Por ejemplo, 
+dtdU es la tasa de cambio del nivel de urbanizacion con respecto al tiempo.
+
+Coeficientes de Interaccion: Los coeficientes k en el sistema de ecuaciones representan la fuerza de las interacciones entre las variables, al igual que las tasas de 
+infeccion y recuperacion en un modelo epidemiologico. Por ejemplo, k1 determina cuanto impacta el crecimiento poblacional en el nivel de urbanizacion.
+
+Variables de Estado: Las variables U,B,Z,C,E,P,R representan el estado actual del sistema, similar a como 
+S,I,R representan el numero de personas susceptibles, infectadas y recuperadas en un modelo epidemiologico.
+
+Condiciones Iniciales: El vector y0 proporciona las condiciones iniciales para cada variable, indicando como esta configurado el sistema en t=0.
+
+Interacciones: Las flechas y signos en el diagrama de influencia y las ecuaciones diferenciales describen como las variables interactuan entre si, similar a como un modelo 
+epidemiologico describe como las personas se infectan y se recuperan.
+'''

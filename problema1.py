@@ -17,12 +17,10 @@ El código presenta definiciones para tres problemas (A, B, C) con diferentes fu
 import numpy as np
 
 def createPopulation(pop_size, dim):
-    """Initialize a population with random values between [0, 1]."""
     """Crear la populacion con valores random entre [0,1]"""
     return np.random.rand(pop_size, dim)
 
 def fitness(individual, obj_func, constraints):
-    """Calculate the fitness of an individual based on objective function and constraints."""
     """Calcualr el fitness basado en el objetivo y las restricciones"""
     if all(constraint(individual) for constraint in constraints):
         return obj_func(individual)
@@ -31,7 +29,7 @@ def fitness(individual, obj_func, constraints):
 
 def selection(population, fitness_scores):
     """Basandose en el fitness, seleccionar los padres"""
-    k = 3  # tournament size
+    k = 3 
     selected_indices = np.argsort(np.random.choice(fitness_scores, k))[-2:]
     return population[selected_indices[0]], population[selected_indices[1]]
 
@@ -113,8 +111,6 @@ def geneticAlg(obj_func, constraints, dim, pop_size=100, max_gen=1000, mutation_
 
 
 
-
-# Apply the genetic algorithm to solve the problems
 solution_A, max_value_A = geneticAlg(objective_A, constraints_A, dim=2)
 solution_B, max_value_B = geneticAlg(objective_B, constraints_B, dim=2)
 solution_C, max_value_C = geneticAlg(objective_C, constraints_C, dim=2)
